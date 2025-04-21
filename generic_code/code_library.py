@@ -29,7 +29,7 @@ def copy_to_table(session,config_file,schema='NA'):
             qid = id.query_id
     return copied_into_result, qid
 
-
+# to collect reject records, you need first run the copy command and get the query id and pass it to get validated.
 def collect_rejects(session,qid,config_file):
     database_name = config_file.get("Database_name")
     Schema_name = config_file.get("Schema_name")
